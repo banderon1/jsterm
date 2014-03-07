@@ -1,10 +1,9 @@
 # jsterm
 jsterm is a terminal simulator that uses a JSON filesystem. To see it in use,
-check out [clarkduvall.com](http://clarkduvall.com).
+check out [banderon.com](http://banderon.com).
 
 ## Disclaimer
-Most of this was written awhile ago when I knew JavaScript about as well as I
-know Spanish (which is a little, but not much). It is due for a rewrite with
+Most of this was written by Clark DuVall. In his own words: It is due for a rewrite with
 some cool new features like pipes, writable files, and other magic.
 
 ## How To Use
@@ -52,4 +51,4 @@ http://google.com
 - Image file: can be any image file with a standard extension (e.g. .png, .jpg)
 
 ## Attribution
-If you use jsterm, it would be great if you could link to this GitHub repo. Thanks!
+If you use jsterm, it would be great if you could link to the original [GitHub repo](https://github.com/clarkduvall/jsterm). Thanks!

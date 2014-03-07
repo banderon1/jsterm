@@ -485,11 +485,11 @@
    }
 
    var term = Object.create(Terminal);
-   term.init(CONFIG, '/json/sample.json', COMMANDS, function() {
+   term.init(CONFIG, '/json/banderon.json', COMMANDS, function() {
       term.enqueue('login')
-          .enqueue('clark')
+          .enqueue('banderon')
           .enqueue('******')
-          .enqueue('cat file1')
+          .enqueue('cat README')
           .enqueue('help')
           .enqueue('ls -l')
           .enqueue('cd dir1/foo')
