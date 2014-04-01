@@ -488,7 +488,7 @@
    term.init(CONFIG, '/json/banderon.json', COMMANDS, function() {
       term.enqueue('login')
           .enqueue('brian')
-          .enqueue('******************')
+          .enqueue('***********')
           .enqueue('cat README')
           .enqueue('help')
           .enqueue('ls family')

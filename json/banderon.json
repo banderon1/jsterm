@@ -9,6 +9,12 @@
          "description": "Brief introduction of myself and this site."
       },
       {
+         "name": "resume",
+         "type": "exec",
+         "contents": "https://www.dropbox.com/s/qx3guek0zmsln60/BrianAndersonResume.pdf",
+         "description": "A link to my resume."
+      },
+      {
          "name": "family",
          "type": "dir",
          "contents": [
@@ -60,7 +66,7 @@
                "contents": "https://www.facebook.com/banderon1"
             },
             {
-               "name": "twittter",
+               "name": "twitter",
                "type": "exec",
                "contents": "https://twitter.com/banderon1"
             },
@@ -80,3 +86,4 @@
       }
    ]
 }
+
