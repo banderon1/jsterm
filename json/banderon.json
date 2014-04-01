@@ -9,31 +9,72 @@
          "description": "Brief introduction of myself and this site."
       },
       {
-         "name": "pic.jpg",
-         "type": "img",
-         "contents": "/images/penguin.png",
-         "caption": "What a beautiful penguin."
-      },
-      {
-         "name": "dir1",
+         "name": "family",
          "type": "dir",
          "contents": [
             {
-               "name": "file2",
-               "type": "text",
-               "contents": "foo"
+               "name": "me.png",
+               "type": "img",
+               "contents": "/images/family/me.png",
+               "caption": "Selfie at work."
             },
             {
-               "name": "foo",
-               "type": "dir",
-               "contents": [
-                  {
-                     "name": "file3",
-                     "type": "exec",
-                     "contents": "http://google.com",
-                     "description": "blahblah"
-                  }
-               ]
+               "name": "alyssa.png",
+               "type": "img",
+               "contents": "/images/family/alyssa.png",
+               "caption": "What a beautiful wife!"
+            },
+            {
+               "name": "amy.png",
+               "type": "img",
+               "contents": "/images/family/amy.png",
+               "caption": "My beautiful princess!"
+            },
+            {
+               "name": "max.jpg",
+               "type": "img",
+               "contents": "/images/family/max.jpg",
+               "caption": "My adventurous son."
+            },
+            {
+               "name": "dog.png",
+               "type": "img",
+               "contents": "/images/family/zero.png",
+               "caption": "Our dog, Zero."
+            },
+            {
+               "name": "old-website",
+               "type": "exec",
+               "contents": "https://sites.google.com/site/banderon1/",
+               "description": "It hasn't been updated since 2010 :-/"
+            }
+         ]
+      },
+      {
+         "name": "social",
+         "type": "dir",
+         "contents": [
+            {
+               "name": "facebook",
+               "type": "exec",
+               "contents": "https://www.facebook.com/banderon1"
+            },
+            {
+               "name": "twittter",
+               "type": "exec",
+               "contents": "https://twitter.com/banderon1"
+            },
+            {
+               "name": "StackOverflow",
+               "type": "exec",
+               "contents": "http://stackoverflow.com/users/693807/brian-anderson",
+               "description": "Still getting started here, trying to contribute to the community."
+            },
+            {
+               "name": "Google+",
+               "type": "exec",
+               "contents": "https://plus.google.com/+BrianAnderson1/posts",
+               "description": "Not many of my friends use this service, but I still like it!"
             }
          ]
       }
