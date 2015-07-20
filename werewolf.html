@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Werewolf Kickstarter - Paypal Pledges</title>
+        <script type="text/javascript">
+            var pledgePaypal={
+                skus:{
+                    'WW-01-USA':{'price':16,'shipping':1,'paypal':'YXNNYETDPRTFJ','img':'WW-01.jpg'},
+                    'WW-02-USA':{'price':29,'shipping':1,'paypal':'YM8P3BKUC3D4E','img':'WW-02.jpg'},
+                    'WW-03-USA':{'price':45,'shipping':1,'paypal':'QEL9CHQ54W67J','img':'WW-03.jpg'},
+                    'WW-04-USA':{'price':60,'shipping':1,'paypal':'9Q4KXUSXMFAEU','img':'WW-04.jpg'},
+                    'WW-01-ROW':{'price':16,'shipping':1,'paypal':'PAG3ZF53CUM7C','img':'WW-01.jpg'},
+                    'WW-02-ROW':{'price':29,'shipping':1,'paypal':'Q2QYYLMBMHBX4','img':'WW-02.jpg'},
+                    'WW-03-ROW':{'price':45,'shipping':1,'paypal':'494BPTYE5H3R6','img':'WW-03.jpg'},
+                    'WW-04-ROW':{'price':60,'shipping':1,'paypal':'QPUK57THACSF2','img':'WW-04.jpg'}
+                },
+                update:function(sku){
+                    if(pledgePaypal.skus[sku]){
+                        var label=document.getElementById('selSku').options[document.getElementById('selSku').selectedIndex].text;
+                        var imgRoot='';
+                        if(pledgePaypal.skus[sku]['shipping']==0){
+                            document.getElementById('selRegionDiv').style.display='none';
+                        }else{
+                            //label+=' <span>['+document.getElementById('selRegion').options[document.getElementById('selRegion').selectedIndex].text+']</span>';
+                        }
+                        label=label.substr(label.indexOf(':')+2);
+                        document.getElementById('paypalURL').href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id='+pledgePaypal.skus[sku]['paypal'];
+                        document.getElementById('skuImage').src=imgRoot+pledgePaypal.skus[sku]['img'];
+                        document.getElementById('paypalURL').style.display='inline';
+                        document.getElementById('skuImage').style.display='inline';
+                        document.getElementById('skuLabel').innerHTML='<h2 style="text-align:center;"><span>$'+pledgePaypal.skus[sku]['price']+':</span> '+label+'</h2>';
+                    }else{
+                        document.getElementById('selRegion').value='';
+                        document.getElementById('selRegionDiv').style.display='block';
+                        document.getElementById('paypalURL').style.display='none';
+                        document.getElementById('skuImage').style.display='none';
+                        document.getElementById('skuLabel').innerHTML='';
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <section class="master">
+                <h1>Werewolf Tokens - Paypal Pledges</h1>
+                <p>Not able to pledge using Kickstarter? Then this page is for you!</p>
+                <p>Choose a Pledge Level below to get started. But be sure to check our <a href="https://www.kickstarter.com/projects/">Kickstarter campaign</a> page and <a href="http://decadebrothers.com/">Decade Brothers</a> for up to date information on Stretch Goals and reward information.</p>
+                <p>Looking to pledge a custom amount? Simply use the "Add-ons/Points" option. You'll be able to select your rewards (and any add-ons) at a later time. A minimum pledge of $20 is required for any Add-ons.</p>
+                <div>
+                    <strong>Pledge Level:</strong>
+                    <select id="selSku" onchange="pledgePaypal.update(this.value);">
+                        <option value="">Please Select:</option>
+                        <optgroup label="US">
+                            <option value="WW-01-USA">$16: Werewolf Token Basic Set</option>
+                            <option value="WW-02-USA">$29: Werewolf Tokens Full Set</option>
+                            <option value="WW-03-USA">$45: Werewolf Tokens Premium Set</option>
+                            <option value="WW-04-USA">$60: Werewolf Tokens Collector Set</option>
+                        </optgroup>
+                        <optgroup label="INTERNATIONAL">
+                            <option value="WW-01-ROW">$16 (+$15 s&amp;h): Werewolf Token Basic Set</option>
+                            <option value="WW-02-ROW">$29 (+$15 s&amp;h): Werewolf Tokens Full Set</option>
+                            <option value="WW-03-ROW">$45 (+$15 s&amp;h): Werewolf Tokens Premium Set</option>
+                            <option value="WW-04-ROW">$60 (+$20 s&amp;h): Werewolf Tokens Collector Set</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div id="selRegionDiv" style="display:none;padding-top:1em;">
+                    <strong>Region:</strong>
+                    <select id="selRegion" onchange="pledgePaypal.update(document.getElementById('selSku').value,this.value);">
+                        <option value="">Please Select:</option>
+                        <option value="USA" selected="selected">United States</option>
+                        <option value="ROW">International</option>
+                    </select>
+                </div>
+                <div style="text-align:center;">
+                    <div id="skuLabel"></div>
+                    <a id="paypalURL" href="#">
+                        <img alt="reward" id="skuImage" style="border-radius:30px;" src="pixel.png">
+                    </a>
+                </div>
+            </section>
+    </body>
+</html>
