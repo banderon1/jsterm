@@ -31,16 +31,22 @@
                "caption": "What a beautiful wife!"
             },
             {
+               "name": "max.jpg",
+               "type": "img",
+               "contents": "/images/family/max.jpg",
+               "caption": "My adventurous son!"
+            },
+            {
                "name": "amy.png",
                "type": "img",
                "contents": "/images/family/amy.png",
                "caption": "My beautiful princess!"
             },
             {
-               "name": "max.jpg",
+               "name": "zoe.jpg",
                "type": "img",
-               "contents": "/images/family/max.jpg",
-               "caption": "My adventurous son."
+               "contents": "/images/family/zoe.jpg",
+               "caption": "My baby girl!"
             },
             {
                "name": "dog.png",
