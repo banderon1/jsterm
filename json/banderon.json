@@ -49,6 +49,12 @@
                "caption": "My baby girl!"
             },
             {
+               "name": "leo.jpg",
+               "type": "img",
+               "contents": "/images/family/leo.jpg",
+               "caption": "My baby boy!"
+            },
+            {
                "name": "dog.png",
                "type": "img",
                "contents": "/images/family/zero.png",
